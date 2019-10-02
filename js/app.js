@@ -49,21 +49,4 @@ var app = new Vue({
             })
         }
     },
-    //mounted:  called after the instance has been mounted,
-    mounted: function() {
-        if(localStorage.getItem('storeItems')) {
-            this.storeItems = JSON.parse(localStorage.getItem('storeItems'));
-        }
-    },
-    // watch: calls the function if the value changes
-    // https://travishorn.com/add-localstorage-to-your-vue-app-in-2-lines-of-code-56eb2c9f371b
-    watch: {
-        storeItems: {
-            handler: function (newList) {
-                localStorage.setItem('storeItems', JSON.stringify(newList));
-            },
-
-            deep: true
-        }
-    }
 });
