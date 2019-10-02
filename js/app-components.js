@@ -28,17 +28,14 @@ Vue.component('list', {
         },
 
         addToCart: function (shoppingCart, item, qty ) {
-            for (i = 0; i < qty; i++) {
+            for (let i = 0; i < qty; i++) {
                 shoppingCart.unshift(item);
             }
             console.log(shoppingCart)
         },
 
-        emptyCart: function () {
-            this.shoppingCart = [];
-        },
         calculateTotalCost: function (shoppingCart) {
-            var totalPrice = 0;
+            let totalPrice = 0;
             shoppingCart.forEach(function (item) {
                 totalPrice += item.price;
             })

@@ -46,24 +46,22 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <cart inline-template>
-                        <div class="shopping-cart">
-                            <h3>Your Shopping Cart</h3>
-                            <ul class="list-group list-group-flush">
-                                <li v-for="item in shoppingCart" :key="item.name">
-                                    <h5>d</h5>
-                                    <div class=" d-flex justify-content-between">
-                                        <div>
-                                            <small>{{item.name}}</small>
-                                            <small>{{item.desc}}</small><br>
-                                            <small>Price: $ {{item.price}}</small><br>
-                                            <small>{{item.qty}}</small><br>
-                                        </div>
+                    <div class="shopping-cart">
+                        <h3>Your Shopping Cart</h3>
+                        <ul class="list-group list-group-flush">
+                            <li v-for="item in shoppingCart" class="list-group-item">
+                                <h5>d</h5>
+                                <div class=" d-flex justify-content-between">
+                                    <div>
+                                        <small>{{item.name}}</small>
+                                        <small>{{item.desc}}</small><br>
+                                        <small>Price: $ {{item.price}}</small><br>
+                                        <small>{{item.qty}}</small><br>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </cart>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close Cart</button>
@@ -81,7 +79,6 @@
 <!-- Vue Application -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js"></script>
 <script src="js/app-components.js"></script>
-<script src="js/app-components2.js"></script>
 <script src="js/app.js"></script>
 
 </body>

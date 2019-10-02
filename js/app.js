@@ -23,6 +23,8 @@ var app = new Vue({
             { name: 'Scenery Print Picture', qty: 1, category: 'scenery', desc: 'Get a 8x10 version of your chosen nature picture', price: 4.99},
         ],
 
+        shoppingCart: [],
+
     },
     // methods: usually "events" triggered by v-on:
     methods: {
